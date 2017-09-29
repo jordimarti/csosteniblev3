@@ -33,6 +33,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'foundation-rails', '~> 6.4', '>= 6.4.1.2'
+gem 'devise', '~> 4.3'
+gem 'devise-i18n', '~> 1.2'
+gem 'simple_form', '~> 3.5'
+gem 'gibbon', '~> 3.1', '>= 3.1.1'
+gem 'paperclip', '~> 5.1'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'sendgrid-ruby', '~> 5.1'
+gem 'cancancan', '~> 2.0'
+gem 'ckeditor', '~> 4.2', '>= 4.2.4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
