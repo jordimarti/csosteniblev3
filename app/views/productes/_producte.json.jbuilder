@@ -1,0 +1,2 @@
+json.extract! producte, :id, :id_ps, :nom_ca, :nom_es, :descripcio_ca, :descripcio_es, :caracteristiques_ca, :caracteristiques_es, :aplicacio_ca, :aplicacio_es, :disponibilitat_ca, :disponibilitat_es, :destacats_ca, :destacats_es, :valoracio, :ambit, :ecoetiqueta, :ecoetiqueta2, :visible, :img_petita, :img1, :nom_doc1_ca, :nom_doc1_es, :created_at, :updated_at
+json.url producte_url(producte, format: :json)

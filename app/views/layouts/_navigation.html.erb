@@ -1,0 +1,29 @@
+<nav>
+  <div class="nav-wrapper cyan darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+        	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">MENU</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li class="active"><%= link_to t('.actualitat'), root_path %></li>
+            <li><%= link_to t('.temes_clau'), temes_clau_index_path %></li>
+            <li><%= link_to t('.videos'), videos_path %></li>
+            <li><a href="#"><%= t('.casos_practics') %></a></li>
+            <li><a href="#"><%= t('.productes') %></a></li>
+            <li><a href="#"><%= t('.marketcons') %></a></li>
+            <li><a href="#"><%= t('.dapcons') %></a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li class="active"><%= link_to t('.actualitat'), root_path %></li>
+            <li><%= link_to t('.temes_clau'), temes_clau_index_path %></li>
+            <li><%= link_to t('.videos'), videos_path %></li>
+            <li><a href="#"><%= t('.casos_practics') %></a></li>
+            <li><a href="#"><%= t('.productes') %></a></li>
+            <li><a href="#"><%= t('.marketcons') %></a></li>
+            <li><a href="#"><%= t('.dapcons') %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+<%= simple_form_for(@producte) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :id_ps %>
+    <%= f.input :nom_ca %>
+    <%= f.input :nom_es %>
+    <%= f.input :descripcio_ca %>
+    <%= f.input :descripcio_es %>
+    <%= f.input :caracteristiques_ca %>
+    <%= f.input :caracteristiques_es %>
+    <%= f.input :aplicacio_ca %>
+    <%= f.input :aplicacio_es %>
+    <%= f.input :disponibilitat_ca %>
+    <%= f.input :disponibilitat_es %>
+    <%= f.input :destacats_ca %>
+    <%= f.input :destacats_es %>
+    <%= f.input :valoracio %>
+    <%= f.input :ambit %>
+    <%= f.input :ecoetiqueta %>
+    <%= f.input :ecoetiqueta2 %>
+    <%= f.input :visible %>
+    <%= f.input :img_petita %>
+    <%= f.input :img1 %>
+    <%= f.input :nom_doc1_ca %>
+    <%= f.input :nom_doc1_es %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

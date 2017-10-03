@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titol ca:</strong>
+  <%= @video.titol_ca %>
+</p>
+
+<p>
+  <strong>Resum ca:</strong>
+  <%= @video.resum_ca %>
+</p>
+
+<p>
+  <strong>Permalink ca:</strong>
+  <%= @video.permalink_ca %>
+</p>
+
+<p>
+  <strong>Contingut ca:</strong>
+  <%= @video.contingut_ca %>
+</p>
+
+<p>
+  <strong>Titol es:</strong>
+  <%= @video.titol_es %>
+</p>
+
+<p>
+  <strong>Resum es:</strong>
+  <%= @video.resum_es %>
+</p>
+
+<p>
+  <strong>Permalink es:</strong>
+  <%= @video.permalink_es %>
+</p>
+
+<p>
+  <strong>Contingut es:</strong>
+  <%= @video.contingut_es %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @video.categoria %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>

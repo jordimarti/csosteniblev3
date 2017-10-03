@@ -1,0 +1,106 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Noticies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titol ca</th>
+      <th>Resum ca</th>
+      <th>Permalink ca</th>
+      <th>Contingut ca</th>
+      <th>Titol es</th>
+      <th>Resum es</th>
+      <th>Permalink es</th>
+      <th>Contingut es</th>
+      <th>Data</th>
+      <th>Dapc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @noticies.each do |noticia| %>
+      <tr>
+        <td><%= noticia.titol_ca %></td>
+        <td><%= noticia.resum_ca %></td>
+        <td><%= noticia.permalink_ca %></td>
+        <td><%= noticia.contingut_ca %></td>
+        <td><%= noticia.titol_es %></td>
+        <td><%= noticia.resum_es %></td>
+        <td><%= noticia.permalink_es %></td>
+        <td><%= noticia.contingut_es %></td>
+        <td><%= noticia.data %></td>
+        <td><%= noticia.dapc %></td>
+        <td><%= link_to 'Show', noticia %></td>
+        <td><%= link_to 'Edit', edit_noticia_path(noticia) %></td>
+        <td><%= link_to 'Destroy', noticia, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Noticia', new_noticia_path %>
+
+<div class="grid-container">
+  <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+        <h4>This is a row of cards.</h4>
+          <p>This row of cards is embedded in an X-Y Block Grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+        <h4>This is a row of cards.</h4>
+          <p>This row of cards is embedded in an X-Y Block Grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

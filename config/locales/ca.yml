@@ -1,0 +1,44 @@
+ca:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "No coincideix amb la confirmació"
+            current_password:
+              blank: "No pot estar en blanc"
+              invalid: "La contrasenya no és vàlida"
+            password:
+              too_short: "La contrasenya ha de tenir com a mínim 8 caràcters"
+              blank: "No pot estar en blanc"
+            email:
+              taken: "Aquest correu electrònic ja està registrat"
+              invalid: "Aquesta adreça de correu electrònic no és vàlida"
+              blank: "Cal escriure el correu electrònic"
+            first_name:
+              blank: "Cal escriure el nom"
+            last_name:
+              blank: "Cal escriure els cognoms"
+            reset_password_token:
+              invalid: "No coincideix amb la confirmació"
+  layouts:
+    top:
+      register: "Registrar-se"
+      sign_in: "Iniciar sessió"
+      account_configuration: "Configuració del compte"
+      sign_out: "Tancar sessió"
+    navigation:
+      actualitat: "Actualitat"
+      temes_clau: "Temes clau"
+      videos: "Vídeos"
+      casos_practics: "Casos pràctics"
+      productes: "Productes"
+      marketcons: "MarketCons"
+      dapcons: "DAPcons"
+  noticies:
+    show:
+      ultimes_noticies: "ÚLTIMES NOTÍCIES"
+  videos:
+    show:
+      ultims_videos: "ÚLTIMS VÍDEOS"
