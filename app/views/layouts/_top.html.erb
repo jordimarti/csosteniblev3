@@ -3,8 +3,8 @@
 	  <div class="medium-3 cell">
 	    <%= link_to( image_tag('https://s3-eu-west-1.amazonaws.com/csosteniblev3/imatges/logo_agenda_2015_hd.png', :alt => 'Logo Agenda de la Construcció Sostenible', :class => 'logo-agenda'), {:controller => '/home', :action => 'index'}) %>
 	  </div>
-	  <div class="medium-9 cell">
-	  	<ul class="menu menu-top right-align">
+	  <div class="medium-9 cell menu-top-right">
+	  	<ul class="menu-top">
 			  
 			  <% if params[:locale] == 'ca' %>
 			  	<li><%= link_to 'Español', :locale => 'es' %></li>

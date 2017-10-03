@@ -1,29 +1,27 @@
-<nav>
-  <div class="nav-wrapper cyan darken-1">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-        	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">MENU</i></a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li class="active"><%= link_to t('.actualitat'), root_path %></li>
-            <li><%= link_to t('.temes_clau'), temes_clau_index_path %></li>
-            <li><%= link_to t('.videos'), videos_path %></li>
-            <li><a href="#"><%= t('.casos_practics') %></a></li>
-            <li><a href="#"><%= t('.productes') %></a></li>
-            <li><a href="#"><%= t('.marketcons') %></a></li>
-            <li><a href="#"><%= t('.dapcons') %></a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li class="active"><%= link_to t('.actualitat'), root_path %></li>
-            <li><%= link_to t('.temes_clau'), temes_clau_index_path %></li>
-            <li><%= link_to t('.videos'), videos_path %></li>
-            <li><a href="#"><%= t('.casos_practics') %></a></li>
-            <li><a href="#"><%= t('.productes') %></a></li>
-            <li><a href="#"><%= t('.marketcons') %></a></li>
-            <li><a href="#"><%= t('.dapcons') %></a></li>
-          </ul>
-        </div>
+<div class="container">
+  <div class="grid-x">
+    <div class="medium-12 cell">
+      <div class="nav-wrapper">
+        <nav role="navigation" class="full-menu-container">
+          
+            <div class="grid-container">
+              <div class="cell medium-12">
+                
+                  <ul id="menu-top-menu-2" class="full-menu nav">
+                    <li class="menu-item"><%= link_to t('.actualitat'), root_path %></li>
+                    <li class="menu-item"><%= link_to t('.temes_clau'), temes_clau_index_path %></li>
+                    <li class="menu-item"><%= link_to t('.videos'), videos_path %></li>
+                    <li class="menu-item"><a href="#"><%= t('.casos_practics') %></a></li>
+                    <li class="menu-item"><a href="#"><%= t('.productes') %></a></li>
+                    <li class="menu-item"><a href="#"><%= t('.marketcons') %></a></li>
+                    <li class="menu-item"><a href="#"><%= t('.dapcons') %></a></li>
+                  </ul>
+                
+              </div>
+            </div>
+          
+        </nav>
       </div>
     </div>
   </div>
-</nav>
+</div>

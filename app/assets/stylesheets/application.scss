@@ -31,8 +31,12 @@
 	margin: 20px 0px 10px 0px;
 }
 
+.menu-top-right {
+	text-align: right;
+}
+
 .menu-top > li {
-	border-right: 1px solid #cccccc;
+	border-right: 1px dotted #cccccc;
 	display: inline;
 }
 
@@ -72,6 +76,267 @@ h2.login-title {
 	margin-top: 20px;
 	margin-left: 5px;
 }
+
+
+
+
+// Full menu
+
+.nav-wrapper {
+	border-bottom: 1px dotted #959595;
+	border-top: 1px dotted #959595;
+}
+
+.full-menu-container {
+    display: none;
+    vertical-align: middle;
+    text-align: center;
+    position: relative
+}
+
+@media only screen and (min-width: 64.063em) {
+    .full-menu-container {
+        display: block
+    }
+}
+
+.full-menu-container.light-menu-color .full-menu > li > a {
+    color: #fff
+}
+
+.full-menu-container.light-menu-color .full-menu > li > a:hover {
+    color: #ef2673
+}
+
+.full-menu-container.light-menu-color .full-menu > li.active > a,
+.full-menu-container.light-menu-color .full-menu > li.sfHover > a {
+    color: #222
+}
+
+.full-menu-container .full-menu {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: auto
+}
+
+.full-menu-container .full-menu a {
+    font-size: 13px;
+    white-space: nowrap;
+    color: #5a5a5a
+}
+
+.full-menu-container .full-menu .fa {
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.rtl .full-menu-container .full-menu .fa {
+    margin-right: 0;
+    margin-left: 10px
+}
+
+.full-menu-container .full-menu > li {
+    display: block;
+    margin: 0;
+    padding: 0 8px
+}
+
+@media only screen and (min-width: 40.063em) {
+    .full-menu-container .full-menu > li {
+        display: inline-block
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+    .full-menu-container .full-menu > li {
+        padding: 0 12px
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    .full-menu-container .full-menu > li {
+        padding: 0 16px
+    }
+}
+
+.full-menu-container .full-menu > li.active > a, .full-menu-container .full-menu > li.sfHover > a {
+    color: #ef2673
+}
+
+.full-menu-container .full-menu > li.active > a:after, .full-menu-container .full-menu > li.sfHover > a:after {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1)
+}
+
+.style1 .full-menu-container .full-menu > li:first-child {
+    padding-left: 0
+}
+
+.full-menu-container .full-menu > li > a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 1;
+    font-weight: 600;
+    color: #222;
+    text-transform: uppercase;
+    font-size: 13px
+}
+
+.full-menu-container .full-menu > li > a:hover {
+    color: #ef2673
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children {
+    position: relative
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children > a:after {
+    display: inline-block;
+    content: "\f107";
+    font-family: FontAwesome;
+    margin-left: 7px;
+    vertical-align: middle;
+    font-size: 11px;
+    position: relative;
+    top: -1px
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent {
+    position: static
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 30px 0 25px;
+    z-index: 20;
+    opacity: 0;
+    will-change: opacity
+}
+
+.boxed .full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder {
+    padding: 30px 15px 25px
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder > .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 75em
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu {
+    float: left;
+    width: 230px;
+    text-align: left
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li {
+    display: block
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li > a {
+    color: #222;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: none
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li > a .fa {
+    color: #c7c7c7;
+    position: relative;
+    top: -1px
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.active a,
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.active a .fa {
+    color: #ef2673
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .category-children {
+    margin-left: 230px
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .category-children > div {
+    display: none;
+    float: left;
+    text-align: left;
+    min-width: 100%
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .category-children > div:first-child {
+    display: block
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .category-children > div a {
+    white-space: normal
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children.menu-item-mega-parent .thb_mega_menu_holder .category-children > div .post .post-gallery {
+    margin-bottom: 15px
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: -12px;
+    background: #f9f9f9;
+    padding: 30px;
+    margin: 0;
+    list-style: none;
+    z-index: 20;
+    text-align: left
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) li {
+    padding: 5px 0;
+    border-bottom: 1px solid #e4e4e4;
+    min-width: 160px
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) li:first-child {
+    padding-top: 0
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) li a {
+    font-weight: 500;
+    font-size: 13px;
+    color: #464646
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) .menu-item-has-children {
+    position: relative
+}
+
+.full-menu-container .full-menu > li.menu-item-has-children .sub-menu:not(.thb_mega_menu) .sub-menu {
+    top: -25px;
+    left: 100%
+}
+
+
+
+
 
 // Formularis
 
