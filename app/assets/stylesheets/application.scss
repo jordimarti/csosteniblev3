@@ -26,13 +26,19 @@
   width: 90%;
 }
 
+.logo-agenda-container {
+	text-align: center;
+}
+
 .logo-agenda {
 	width: 200px;
-	margin: 20px 0px 10px 0px;
+	margin-bottom: 20px;
 }
 
 .menu-top-right {
 	text-align: right;
+	//border-bottom: 1px dotted #cccccc;
+	height: 30px;
 }
 
 .menu-top > li {
@@ -336,6 +342,21 @@ h2.login-title {
 
 
 
+
+// Main title
+
+.main-title-container {
+	height: 180px;
+	background-color: #EAEAEA;
+	text-align: center;
+	margin-bottom: 30px;
+	padding: 60px 0px;
+}
+
+.main-title {
+	font-size: 2.5em;
+	font-weight: bold;
+}
 
 
 // Formularis

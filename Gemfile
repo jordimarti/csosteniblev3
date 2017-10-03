@@ -44,6 +44,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'sendgrid-ruby', '~> 5.1'
 gem 'cancancan', '~> 2.0'
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
