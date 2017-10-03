@@ -6,9 +6,21 @@
 	margin-top: 20px;
 }
 
-.hero-title {
-	background-color:rgba(0, 0, 0, 0.5);
+.home-top-image-container {
+	position: relative;
+}
+
+.home-top-image-text {
+	position: absolute;
+	bottom: 0;
 	width: 100%;
+	background-color:rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+
+.hero-title {
+	font-size: 1.6em;
+	color: white;
 }
 
 .home-title {
