@@ -42,3 +42,6 @@ ca:
   videos:
     show:
       ultims_videos: "ÚLTIMS VÍDEOS"
+  temes_clau:
+    index:
+      temes_clau: "TEMES CLAU"

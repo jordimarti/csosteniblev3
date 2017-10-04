@@ -3,7 +3,7 @@
 	<div class="grid-x">
 		<div class="medium-12 cell">
 			<div class="main-title-container">
-				<span class="main-title">TEMES CLAU</span>
+				<span class="main-title"><%= t('.temes_clau') %></span>
 			</div>
 		</div>
 	</div>
@@ -42,8 +42,16 @@
 
 <% else %>
 <div class="container">
-<div class="container-tema-clau">
-	<div class="row temes-clau-row">
+	<div class="grid-x">
+		<div class="medium-12 cell">
+			<div class="main-title-container">
+				<span class="main-title"><%= t('.temes_clau') %></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-x grid-margin-x grid-margin-y">
+
 		<div class="medium-4 cell">
 			<%= link_to image_tag('https://s3-eu-west-1.amazonaws.com/csostenible/imatges/temes_clau/marc_conceptual_petit_es.jpg'), temes_clau_marc_conceptual_path, alt: "Marco conceptual", class: "responsive-img" %>	
 		</div>
@@ -53,8 +61,8 @@
 		<div class="medium-4 cell">
 			<%= link_to image_tag('https://s3-eu-west-1.amazonaws.com/csostenible/imatges/temes_clau/passius_petit_es.jpg'), temes_clau_energia_passius_path, alt: "Energía: sistemas pasivos", class: "responsive-img" %>
 		</div>
-	</div>
-	<div class="row temes-clau-row">
+	
+	
 		<div class="medium-4 cell">
 			<%= link_to image_tag('https://s3-eu-west-1.amazonaws.com/csostenible/imatges/temes_clau/actius_petit_es.jpg'), temes_clau_energia_actius_path, alt: "Energía: sistemas activos", class: "responsive-img" %>
 		</div>
@@ -64,8 +72,7 @@
 		<div class="medium-4 cell">
 			<%= link_to image_tag('https://s3-eu-west-1.amazonaws.com/csostenible/imatges/temes_clau/aigua_petit_es.jpg'), temes_clau_aigua_path, alt: "Agua", class: "responsive-img" %>
 		</div>
-	</div>
-	<div class="row temes-clau-row">
+	
 		<div class="medium-4 cell">
 			<%= link_to image_tag('https://s3-eu-west-1.amazonaws.com/csostenible/imatges/temes_clau/residus_petit_es.jpg'), temes_clau_residus_path, alt: "Residuos", class: "responsive-img" %>
 		</div>
@@ -74,5 +81,5 @@
 		</div>
 	</div>
 </div>
-</div>
+
 <% end %>
