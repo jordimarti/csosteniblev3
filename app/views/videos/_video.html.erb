@@ -1,6 +1,11 @@
 <div>
-  <% if video.image? %>
-    <%= image_tag video.image_url %>
+  <% if video.image_data? %>
+    <%= image_tag video.image_url(:thumb) %>
+    <p>
+      Size <%= video.image[:original].size %> bytes<br>
+      MIME type <%= video.image[:original].mime_type %><br>
+      Dimensions <%= "#{video.image[:original].width}x#{video.image[:original].height}" %>
+    </p>
   <% end %>
   <p><%= video.titol_ca %> | <%= link_to 'Edit', edit_video_path(video) %></p>
 </div>

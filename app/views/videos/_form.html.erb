@@ -11,6 +11,11 @@
     <%= f.input :permalink_es %>
     <%= f.input :contingut_es %>
     <%= f.input :categoria %>
+    <%= f.input :image, as: :hidden, input_html: {value: @video.cached_image_data} %>
+    <%= f.input :image, as: :file %>
+    <% if @video.image_data? %>
+      Remove attachment: <%= f.check_box :remove_image %>
+    <% end %>
   </div>
 
   <div class="form-actions">

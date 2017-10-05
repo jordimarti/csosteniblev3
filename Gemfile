@@ -45,7 +45,10 @@ gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'shrine', '~> 2.7'
 gem 'aws-sdk-s3', '~> 1.4'
-gem 'trix'
+gem 'image_processing', '~> 0.4.5'
+gem "mini_magick", ">= 4.3.5"
+gem 'fastimage', '~> 2.1'
+gem 'trix', '~> 0.11.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
