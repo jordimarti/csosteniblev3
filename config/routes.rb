@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'temes_clau/aigua'
   get 'temes_clau/residus'
   get 'temes_clau/salut'
+  get 'videos/llistat'
 
   resources :videos
   resources :productes

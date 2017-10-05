@@ -38,13 +38,14 @@ gem 'devise', '~> 4.3'
 gem 'devise-i18n', '~> 1.2'
 gem 'simple_form', '~> 3.5'
 gem 'gibbon', '~> 3.1', '>= 3.1.1'
-gem 'paperclip', '~> 5.1'
-gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'sendgrid-ruby', '~> 5.1'
 gem 'cancancan', '~> 2.0'
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'shrine', '~> 2.7'
+gem 'aws-sdk-s3', '~> 1.4'
+gem 'trix'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

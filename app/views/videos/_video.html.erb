@@ -1,0 +1,6 @@
+<div>
+  <% if video.image? %>
+    <%= image_tag video.image_url %>
+  <% end %>
+  <p><%= video.titol_ca %> | <%= link_to 'Edit', edit_video_path(video) %></p>
+</div>

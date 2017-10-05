@@ -1,43 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="grid-x grid-margin-x">
+    <div class="medium-4 cell">
+      <h4></h4>
+      <div class="img-index-video">
+        
+      </div>
+      <div class="text-index-video">
 
-<h1>Videos</h1>
+      </div>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Titol ca</th>
-      <th>Resum ca</th>
-      <th>Permalink ca</th>
-      <th>Contingut ca</th>
-      <th>Titol es</th>
-      <th>Resum es</th>
-      <th>Permalink es</th>
-      <th>Contingut es</th>
-      <th>Categoria</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @videos.each do |video| %>
-      <tr>
-        <td><%= video.titol_ca %></td>
-        <td><%= video.resum_ca %></td>
-        <td><%= video.permalink_ca %></td>
-        <td><%= video.contingut_ca %></td>
-        <td><%= video.titol_es %></td>
-        <td><%= video.resum_es %></td>
-        <td><%= video.permalink_es %></td>
-        <td><%= video.contingut_es %></td>
-        <td><%= video.categoria %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Video', new_video_path %>
+  <div class="grid-x">
+    <div class="medium-12 cell">
+      <%= link_to 'Nou vídeo', new_video_path %>
+      <%= render @videos %>
+    </div>
+  </div>
+</div>
