@@ -7,22 +7,25 @@
     </div>
   </div>
 
-  <% @videos.in_groups_of(3).each do |video_array| %>
+  <% @videos.in_groups_of(2).each do |video_array| %>
     <div class="video-array-container">
       <div class="grid-x grid-margin-x">
         <% video_array.each do |video| %>
-          <div class="medium-4 cell">
-            <div class="video-container">
-              <%= link_to video do %>
-                <h4><%= video.titol_ca %></h4>
-                <div class="img-index-video">
+          <div class="medium-6 cell">
+            <div class="index-video-container">
+              
+              <div class="img-index-video">
+                <%= link_to video do %>
                   <% if video.image_data? %>
                     <%= image_tag video.image_url(:original) %>
                   <% end %>
-                </div>
-              <% end %>
+                <% end %>  
+              </div>
               <div class="text-index-video">
-                <div><%= sanitize video.resum_ca %></div>
+                <%= link_to video do %>
+                  <h4><%= video.titol_ca %></h4>
+                  <p><%= truncate(video.resum_ca, :length => 250) %></p>
+                <% end %>
               </div>
             </div>
           </div>

@@ -5,15 +5,29 @@
 .video-array-container {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #ccc;
 }
 
-.video-container > a > h4 {
+.index-video-container {
+	border: 1px solid #eaeaea;
+	height: 300px;
+}
+
+.img-index-video {
+	float: left;
+	width: 200px;
+}
+
+.text-index-video {
+	margin-left: 200px;
+	padding: 15px;
+}
+
+.text-index-video > a > h4 {
 	font-size: 1.2em;
 	font-weight: bold;
 	color: #333;
 }
 
-.img-index-video {
-	margin-bottom: 10px;
+.text-index-video > a > p {
+	color: #666;
 }
