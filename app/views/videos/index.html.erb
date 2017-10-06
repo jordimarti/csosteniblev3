@@ -1,20 +1,34 @@
 <div class="container">
-  <div class="grid-x grid-margin-x">
-    <div class="medium-4 cell">
-      <h4></h4>
-      <div class="img-index-video">
-        
-      </div>
-      <div class="text-index-video">
-
-      </div>
-    </div>
-  </div>
-
   <div class="grid-x">
     <div class="medium-12 cell">
-      <%= link_to 'Nou vídeo', new_video_path %>
-      <%= render @videos %>
+      <div class="main-title-container">
+        <span class="main-title"><%= t('.videos') %></span>
+      </div>
     </div>
   </div>
+
+  <% @videos.in_groups_of(3).each do |video_array| %>
+    <div class="video-array-container">
+      <div class="grid-x grid-margin-x">
+        <% video_array.each do |video| %>
+          <div class="medium-4 cell">
+            <div class="video-container">
+              <%= link_to video do %>
+                <h4><%= video.titol_ca %></h4>
+                <div class="img-index-video">
+                  <% if video.image_data? %>
+                    <%= image_tag video.image_url(:original) %>
+                  <% end %>
+                </div>
+              <% end %>
+              <div class="text-index-video">
+                <div><%= sanitize video.resum_ca %></div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
 </div>

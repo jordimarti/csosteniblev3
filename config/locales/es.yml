@@ -42,6 +42,8 @@ es:
   videos:
     show:
       ultims_videos: "ÚLTIMOS VÍDEOS"
+    index:
+      videos: "VÍDEOS"
   temes_clau:
     index:
       temes_clau: "TEMAS CLAVE"

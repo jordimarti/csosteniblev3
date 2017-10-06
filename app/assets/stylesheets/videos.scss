@@ -1,3 +1,19 @@
 // Place all the styles related to the Videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.video-array-container {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.video-container > a > h4 {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #333;
+}
+
+.img-index-video {
+	margin-bottom: 10px;
+}
