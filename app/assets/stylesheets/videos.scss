@@ -12,6 +12,17 @@
 	height: 300px;
 }
 
+@media screen and (max-width: 63.9375em) {
+	
+	.video-array-container {
+		margin-bottom: 0px;
+	}
+
+	.index-video-container {
+		margin-bottom: 20px;
+	}
+}
+
 .img-index-video {
 	float: left;
 	width: 200px;
@@ -21,6 +32,21 @@
 	margin-left: 200px;
 	padding: 15px;
 }
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	.index-video-container {
+		height: 150px;
+	}
+
+	.img-index-video {
+		width: 100px;
+	}
+
+	.text-index-video {
+		margin-left: 100px;
+	}
+}
+
 
 .text-index-video > a > h4 {
 	font-size: 1.2em;
