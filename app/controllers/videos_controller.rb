@@ -14,6 +14,8 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+    #@ultims = Video.all.last(4)
+    @ultims = Video.offset(rand(Video.count) - 4).limit(4)
   end
 
   # GET /videos/new

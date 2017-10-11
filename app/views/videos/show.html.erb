@@ -1,49 +1,64 @@
-<p id="notice"><%= notice %></p>
+<div class="container container-show-video">
+  <div class="grid-x grid-margin-x">
+    <div class="medium-8 cell">
+      
+      <% if params[:locale] == 'ca' %>
+        <div class="titol-video">
+          <%= @video.titol_ca %>
+        </div>
+        <div class="contingut-video">
+          <%= raw @video.contingut_ca %>
+        </div>
+      <% else %>
+        <div class="titol-video">
+          <%= @video.titol_es %>
+        </div>
+        <div class="contingut-video">
+          <%= raw @video.contingut_es %>
+        </div>
+      <% end %>
 
-<p>
-  <strong>Titol ca:</strong>
-  <%= @video.titol_ca %>
-</p>
+    </div>
+    <div class="medium-4 cell">
+      <div class="home-title">
+        NOTÍCIES
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Resum ca:</strong>
-  <%= @video.resum_ca %>
-</p>
-
-<p>
-  <strong>Permalink ca:</strong>
-  <%= @video.permalink_ca %>
-</p>
-
-<p>
-  <strong>Contingut ca:</strong>
-  <%= @video.contingut_ca %>
-</p>
-
-<p>
-  <strong>Titol es:</strong>
-  <%= @video.titol_es %>
-</p>
-
-<p>
-  <strong>Resum es:</strong>
-  <%= @video.resum_es %>
-</p>
-
-<p>
-  <strong>Permalink es:</strong>
-  <%= @video.permalink_es %>
-</p>
-
-<p>
-  <strong>Contingut es:</strong>
-  <%= @video.contingut_es %>
-</p>
-
-<p>
-  <strong>Categoria:</strong>
-  <%= @video.categoria %>
-</p>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+  <% @ultims.in_groups_of(2).each do |video_array| %>
+    <div class="video-array-container">
+      <div class="grid-x grid-margin-x">
+        <% video_array.each do |video| %>
+          <div class="medium-6 cell">
+            <div class="index-video-container">
+              
+              <div class="img-index-video">
+                <%= link_to video do %>
+                  <% if video.image_data? %>
+                    <%= image_tag video.image_url(:original) %>
+                  <% end %>
+                <% end %>  
+              </div>
+              <div class="text-index-video">
+                <%= link_to video do %>
+                  <h4><%= video.titol_ca %></h4>
+                  
+                  <div class="show-for-large">
+                    <p class="resum-video"><%= truncate(video.resum_ca, :length => 200) %></p>
+                  </div>
+                  <div class="show-for-medium-only">
+                    <p class="resum-video"><%= truncate(video.resum_ca, :length => 70) %></p>
+                  </div>
+                  <div class="show-for-small-only">
+                    <p class="resum-video"><%= truncate(video.resum_ca, :length => 200) %></p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
