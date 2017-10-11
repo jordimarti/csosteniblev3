@@ -1,10 +1,13 @@
 class CasPracticsController < ApplicationController
   before_action :set_cas_practic, only: [:show, :edit, :update, :destroy]
 
+  def llistat
+    @cas_practics = CasPractic.all
+  end
   # GET /cas_practics
   # GET /cas_practics.json
   def index
-    @cas_practics = CasPractic.all
+    @cas_practics = CasPractic.all.order(created_at: :desc)
   end
 
   # GET /cas_practics/1
