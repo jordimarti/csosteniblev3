@@ -5,7 +5,8 @@
     <%= f.input :titol_ca %>
     <%= f.input :resum_ca %>
     <%= f.input :permalink_ca %>
-    <%= f.input :descripcio_ca %>
+    <%= f.input :descripcio_ca, as: :hidden %>
+    <trix-editor input="cas_practic_descripcio_ca"></trix-editor>
     <%= f.input :emplacament_ca %>
     <%= f.input :arquitectura_ca %>
     <%= f.input :materials_ca %>

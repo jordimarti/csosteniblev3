@@ -14,13 +14,13 @@
           <%= @video.titol_es %>
         </div>
         <div class="contingut-video">
-          <%= raw @video.contingut_es %>
+          <%= sanitize @video.contingut_es %>
         </div>
       <% end %>
 
     </div>
     <div class="medium-4 cell">
-      <div class="home-title">
+      <div class="titol-seccio">
         NOTÍCIES
       </div>
     </div>
