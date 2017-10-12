@@ -1,0 +1,2 @@
+module FotoCasosHelper
+end

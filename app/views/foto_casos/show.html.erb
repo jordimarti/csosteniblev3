@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag @foto_cas.image_url(:thumb) %>
+<p>
+  <strong>Image data:</strong>
+  <%= @foto_cas.image_data %>
+</p>
+
+<p>
+  <strong>Cas practic:</strong>
+  <%= @foto_cas.cas_practic_id %>
+</p>
+
+<p>
+  <strong>Text ca:</strong>
+  <%= @foto_cas.text_ca %>
+</p>
+
+<p>
+  <strong>Text es:</strong>
+  <%= @foto_cas.text_es %>
+</p>
+
+<p>
+  <strong>Text en:</strong>
+  <%= @foto_cas.text_en %>
+</p>
+
+<%= link_to 'Edit', edit_foto_cas_path(@foto_cas) %> |
+<%= link_to 'Back', foto_casos_path %>

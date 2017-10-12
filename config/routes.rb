@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :foto_casos
   resources :photos
   get 'temes_clau/index'
   get 'temes_clau/marc_conceptual'

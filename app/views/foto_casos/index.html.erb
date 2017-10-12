@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foto Casos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image data</th>
+      <th>Cas practic</th>
+      <th>Text ca</th>
+      <th>Text es</th>
+      <th>Text en</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foto_casos.each do |foto_cas| %>
+      <tr>
+        <td><%= foto_cas.image_data %></td>
+        <td><%= foto_cas.cas_practic_id %></td>
+        <td><%= foto_cas.text_ca %></td>
+        <td><%= foto_cas.text_es %></td>
+        <td><%= foto_cas.text_en %></td>
+        <td><%= link_to 'Show', foto_cas %></td>
+        <td><%= link_to 'Edit', edit_foto_cas_path(foto_cas) %></td>
+        <td><%= link_to 'Destroy', foto_cas, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Foto Cas', new_foto_cas_path %>

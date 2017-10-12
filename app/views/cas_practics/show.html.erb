@@ -15,37 +15,23 @@
             <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
           </div>
           <ul class="orbit-container">
-            <li class="is-active orbit-slide">
-              <figure class="orbit-figure">
-                <img class="orbit-image" src="https://placehold.it/1200x600/999?text=Slide-1" alt="Space">
-                <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
-              </figure>
-            </li>
-            <li class="orbit-slide">
-              <figure class="orbit-figure">
-                <img class="orbit-image" src="https://placehold.it/1200x600/888?text=Slide-2" alt="Space">
-                <figcaption class="orbit-caption">Lets Rocket!</figcaption>
-              </figure>
-            </li>
-            <li class="orbit-slide">
-              <figure class="orbit-figure">
-                <img class="orbit-image" src="https://placehold.it/1200x600/777?text=Slide-3" alt="Space">
-                <figcaption class="orbit-caption">Encapsulating</figcaption>
-              </figure>
-            </li>
-            <li class="orbit-slide">
-              <figure class="orbit-figure">
-                <img class="orbit-image" src="https://placehold.it/1200x600/666&text=Slide-4" alt="Space">
-                <figcaption class="orbit-caption">Outta This World</figcaption>
-              </figure>
-            </li>
+            <% @fotos_cas.each do |foto| %>
+              <li class="is-active orbit-slide">
+                <figure class="orbit-figure">
+                  
+                  <%= image_tag foto.image_url(:original, public: true, host: "https://d2dvjaugh07t30.cloudfront.net"), class: 'orbit-image' %>
+                  <figcaption class="orbit-caption"><%= foto.text_ca %></figcaption>
+                </figure>
+              </li>
+            <% end %>
           </ul>
         </div>
         <nav class="orbit-bullets">
+          
           <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
           <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
           <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-          <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+          
         </nav>
       </div>
 
@@ -72,159 +58,12 @@
         <p><span class="titol-credits-cas">Tipus de promoció:</span><br/>
         <%= @cas_practic.tipus_promocio_ca %></p>
       </div>
+
+      <div class="titol-seccio">
+        NOTÍCIES
+      </div>
+
     </div>
   </div>
 </div>
 
-<p>
-  <strong>Titol ca:</strong>
-  <%= @cas_practic.titol_ca %>
-</p>
-
-<p>
-  <strong>Resum ca:</strong>
-  <%= @cas_practic.resum_ca %>
-</p>
-
-<p>
-  <strong>Permalink ca:</strong>
-  <%= @cas_practic.permalink_ca %>
-</p>
-
-<p>
-  <strong>Descripcio ca:</strong>
-  <%= sanitize @cas_practic.descripcio_ca %>
-</p>
-
-<p>
-  <strong>Emplacament ca:</strong>
-  <%= @cas_practic.emplacament_ca %>
-</p>
-
-<p>
-  <strong>Arquitectura ca:</strong>
-  <%= @cas_practic.arquitectura_ca %>
-</p>
-
-<p>
-  <strong>Materials ca:</strong>
-  <%= @cas_practic.materials_ca %>
-</p>
-
-<p>
-  <strong>Energia ca:</strong>
-  <%= @cas_practic.energia_ca %>
-</p>
-
-<p>
-  <strong>Aigua ca:</strong>
-  <%= @cas_practic.aigua_ca %>
-</p>
-
-<p>
-  <strong>Certificacions ca:</strong>
-  <%= @cas_practic.certificacions_ca %>
-</p>
-
-<p>
-  <strong>Arquitectes ca:</strong>
-  <%= @cas_practic.arquitectes_ca %>
-</p>
-
-<p>
-  <strong>Emplacament ca:</strong>
-  <%= @cas_practic.emplacament_ca %>
-</p>
-
-<p>
-  <strong>Any construccio ca:</strong>
-  <%= @cas_practic.any_construccio_ca %>
-</p>
-
-<p>
-  <strong>Us edifici ca:</strong>
-  <%= @cas_practic.us_edifici_ca %>
-</p>
-
-<p>
-  <strong>Tipus promocio ca:</strong>
-  <%= @cas_practic.tipus_promocio_ca %>
-</p>
-
-<p>
-  <strong>Titol es:</strong>
-  <%= @cas_practic.titol_es %>
-</p>
-
-<p>
-  <strong>Resum es:</strong>
-  <%= @cas_practic.resum_es %>
-</p>
-
-<p>
-  <strong>Permalink es:</strong>
-  <%= @cas_practic.permalink_es %>
-</p>
-
-<p>
-  <strong>Descripcio es:</strong>
-  <%= @cas_practic.descripcio_es %>
-</p>
-
-<p>
-  <strong>Emplacament es:</strong>
-  <%= @cas_practic.emplacament_es %>
-</p>
-
-<p>
-  <strong>Arquitectura es:</strong>
-  <%= @cas_practic.arquitectura_es %>
-</p>
-
-<p>
-  <strong>Materials es:</strong>
-  <%= @cas_practic.materials_es %>
-</p>
-
-<p>
-  <strong>Energia es:</strong>
-  <%= @cas_practic.energia_es %>
-</p>
-
-<p>
-  <strong>Aigua es:</strong>
-  <%= @cas_practic.aigua_es %>
-</p>
-
-<p>
-  <strong>Certificacions es:</strong>
-  <%= @cas_practic.certificacions_es %>
-</p>
-
-<p>
-  <strong>Arquitectes es:</strong>
-  <%= @cas_practic.arquitectes_es %>
-</p>
-
-<p>
-  <strong>Emplacament es:</strong>
-  <%= @cas_practic.emplacament_es %>
-</p>
-
-<p>
-  <strong>Any construccio es:</strong>
-  <%= @cas_practic.any_construccio_es %>
-</p>
-
-<p>
-  <strong>Us edifici es:</strong>
-  <%= @cas_practic.us_edifici_es %>
-</p>
-
-<p>
-  <strong>Tipus promocio es:</strong>
-  <%= @cas_practic.tipus_promocio_es %>
-</p>
-
-<%= link_to 'Edit', edit_cas_practic_path(@cas_practic) %> |
-<%= link_to 'Back', cas_practics_path %>

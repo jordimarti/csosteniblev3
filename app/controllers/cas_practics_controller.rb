@@ -13,6 +13,7 @@ class CasPracticsController < ApplicationController
   # GET /cas_practics/1
   # GET /cas_practics/1.json
   def show
+    @fotos_cas = FotoCas.where(cas_practic_id: 1)
   end
 
   # GET /cas_practics/new
