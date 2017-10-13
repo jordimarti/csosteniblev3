@@ -1,0 +1,23 @@
+// Place all the styles related to the dapcons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.menu-dapcons-lateral-container {
+	background-color: #efefef;
+}
+
+.menu-dapcons > li {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #d3d3d3;
+}
+
+.menu-dapcons > li > a {
+	color: #333;
+}
+
+.menu-dapcons-seccio {
+	margin-left: 15px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
