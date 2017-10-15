@@ -66,3 +66,8 @@ ca:
   temes_clau:
     index:
       temes_clau: "TEMES CLAU"
+  dapcons:
+    que_son:
+      que_son: "Què són les DAPcons<sup>®</sup>?"
+    utilitat:
+      utilitat: "Utilitat i ús de les DAPcons<sup>®</sup>"

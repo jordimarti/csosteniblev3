@@ -1,4 +1,6 @@
 class DapconsController < ApplicationController
+  before_action :noticies_dapc
+
   def index
   end
 
@@ -46,4 +48,9 @@ class DapconsController < ApplicationController
 
   def contacte
   end
+
+  private
+    def noticies_dapc
+      @noticies = Noticia.where(dapc: true).limit(6)
+    end
 end

@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .menu-dapcons-lateral-container {
-	background-color: #efefef;
+	//background-color: #efefef;
+	//border-left: 1px dotted #ccc;
+	border-right: 1px dotted #ccc;
 }
 
 .menu-dapcons > li {
@@ -20,4 +22,28 @@
 	margin-left: 15px;
 	margin-bottom: 10px;
 	font-weight: bold;
+}
+
+.text-negreta {
+	font-weight: bold;
+}
+
+.titol-pagina-dapcons {
+	margin: 60px 0px 20px 0px;
+	font-size: 1.9em;
+	font-weight: bold;
+}
+
+.subtitol-dapcons {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 26px;
+}
+
+.contenidor-noticies-dapcons {
+	margin-top: 60px;
+}
+
+.contenidor-noticia {
+	border: 1px solid #ccc;
 }

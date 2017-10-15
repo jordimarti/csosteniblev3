@@ -1,3 +1,29 @@
+		
+			<div class="grid-x grid-margin-x">
+				<div class="medium-12 cell">
+					<div class="contenidor-noticies-dapcons">
+						<div class="titol-seccio">
+							NOTÍCIES DAPcons<sup>®</sup>
+						</div>
+						<% counter = 0 %>
+						<div class="grid-x grid-margin-x">
+						<% @noticies.each do |noticia| %>
+			        <% if counter != 0 && counter % 2 == 0 %>
+			          </div>
+			          <div class="grid-x grid-margin-x">
+			        <% end %>
+
+			        <div class="medium-6 cell">
+								<div class="contenidor-noticia">
+									
+									<%= noticia.titol_ca %>
+								</div>
+							</div>
+							<% counter += 1 %>
+						<% end %>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
