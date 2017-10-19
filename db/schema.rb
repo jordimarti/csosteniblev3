@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20171012123603) do
     t.text "contingut_es"
     t.datetime "data"
     t.boolean "dapc"
+    t.text "image_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

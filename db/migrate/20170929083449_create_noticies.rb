@@ -11,6 +11,7 @@ class CreateNoticies < ActiveRecord::Migration[5.1]
       t.text :contingut_es
       t.timestamp :data
       t.boolean :dapc
+      t.text :image_data
 
       t.timestamps
     end
