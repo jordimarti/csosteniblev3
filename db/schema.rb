@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012123603) do
+ActiveRecord::Schema.define(version: 20171022140913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,12 @@ ActiveRecord::Schema.define(version: 20171012123603) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cerca_productes", force: :cascade do |t|
+    t.string "cerca"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "foto_casos", force: :cascade do |t|
     t.text "image_data"
     t.integer "cas_practic_id"
@@ -74,7 +80,6 @@ ActiveRecord::Schema.define(version: 20171012123603) do
     t.text "contingut_es"
     t.datetime "data"
     t.boolean "dapc"
-    t.text "image_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,2 @@
+class CercaProducte < ApplicationRecord
+end

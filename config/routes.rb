@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cerca_productes
+  get 'productes/cerca_productes'
   get 'dapcons', to: 'dapcons#index', :as => :dapcons
   get 'dapcons/que_son'
   get 'dapcons/utilitat'
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
   get 'temes_clau/salut'
   get 'videos/llistat'
   get 'cas_practics/llistat'
+  get 'productes/llistat'
 
   resources :videos
   resources :productes

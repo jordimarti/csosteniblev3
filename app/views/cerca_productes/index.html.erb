@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cerca Productes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cerca</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cerca_productes.each do |cerca_producte| %>
+      <tr>
+        <td><%= cerca_producte.cerca %></td>
+        <td><%= link_to 'Show', cerca_producte %></td>
+        <td><%= link_to 'Edit', edit_cerca_producte_path(cerca_producte) %></td>
+        <td><%= link_to 'Destroy', cerca_producte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cerca Producte', new_cerca_producte_path %>

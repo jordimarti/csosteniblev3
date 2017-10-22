@@ -1,10 +1,22 @@
 class ProductesController < ApplicationController
   before_action :set_producte, only: [:show, :edit, :update, :destroy]
+  before_action :nova_cerca
 
   # GET /productes
   # GET /productes.json
   def index
     @productes = Producte.all
+    @cerca_producte = CercaProducte.new
+    @prova = 'Holahola'
+  end
+
+  def llistat
+    @productes = Producte.all
+  end
+
+  def cerca_productes
+    @cerca_producte = CercaProducte.new(cerca_producte_params)
+    @cerca_producte.save
   end
 
   # GET /productes/1
@@ -67,8 +79,16 @@ class ProductesController < ApplicationController
       @producte = Producte.find(params[:id])
     end
 
+    def nova_cerca
+      @cerca_producte = CercaProducte.new
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def producte_params
       params.require(:producte).permit(:id_ps, :nom_ca, :nom_es, :descripcio_ca, :descripcio_es, :caracteristiques_ca, :caracteristiques_es, :aplicacio_ca, :aplicacio_es, :disponibilitat_ca, :disponibilitat_es, :destacats_ca, :destacats_es, :valoracio, :ambit, :ecoetiqueta, :ecoetiqueta2, :visible, :img_petita, :img1, :nom_doc1_ca, :nom_doc1_es)
+    end
+
+    def cerca_producte_params
+      params.require(:cerca_producte).permit(:cerca)
     end
 end
