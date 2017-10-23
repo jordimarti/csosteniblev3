@@ -7,7 +7,6 @@ class ProductesController < ApplicationController
   def index
     @productes = Producte.all
     @cerca_producte = CercaProducte.new
-    @prova = 'Holahola'
   end
 
   def llistat
