@@ -26,16 +26,7 @@
             <div class="text-index-cas">
               <%= link_to cas do %>
                 <h4><%= cas.titol_ca %></h4>
-                
-                <div class="show-for-large">
-                  <p class="resum-video"><%= truncate(cas.descripcio_ca, :length => 200) %></p>
-                </div>
-                <div class="show-for-medium-only">
-                  <p class="resum-video"><%= truncate(cas.descripcio_ca, :length => 70) %></p>
-                </div>
-                <div class="show-for-small-only">
-                  <p class="resum-video"><%= truncate(cas.descripcio_ca, :length => 200) %></p>
-                </div>
+                <p class="resum-video"><%= sanitize cas.descripcio_ca %></p>
               <% end %>
             </div>
           </div>
