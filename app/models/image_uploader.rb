@@ -16,6 +16,6 @@ class ImageUploader < Shrine
 	plugin :store_dimensions
 
 	process(:store) do |io, context|
-    { original: io, thumb: resize_to_limit!(io.download, 300, 300) }
+    { original: io, medium: resize_to_fit!(io.download, 600, 600), thumb: resize_to_limit!(io.download, 300, 300) }
   end
 end

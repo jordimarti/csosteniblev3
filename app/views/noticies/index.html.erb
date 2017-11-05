@@ -1,14 +1,14 @@
 <div class="container">
   <div class="grid-x">
     <div class="medium-12 cell">
-      <div class="main-title-container">
+      <div class="main-title-container noticies-main-title-container">
         <span class="main-title"><%= t('.actualitat') %></span>
       </div>
     </div>
   </div>
 
   <% counter = 0 %>
-  <div class="cas-array-container">
+  <div class="noticia-array-container">
     <div class="grid-x grid-margin-x">
       <% @noticies.each do |noticia| %>
         <% if counter != 0 && counter % 3 == 0 %>
@@ -17,149 +17,24 @@
         <% end %>
 
         <div class="medium-4 cell">
-          <div class="index-cas-container">
-            <div class="img-index-cas">
+          <div class="index-noticia-container">
+            <% if noticia.image.present? %>
               <%= link_to noticia do %>
-                
-              <% end %>  
-            </div>
-            <div class="text-index-cas">
+                <%= image_tag noticia.image_url(:original), class: 'img-index-noticia' %>
+              <% end %> 
+            <% end %>   
+            <div class="titol-index-noticia">
               <%= link_to noticia do %>
                 <h4><%= noticia.titol_ca %></h4>
-                
-                <div class="show-for-large">
-                  <p class="resum-video"><%= truncate(noticia.resum_ca, :length => 200) %></p>
-                </div>
-                <div class="show-for-medium-only">
-                  <p class="resum-video"><%= truncate(noticia.resum_ca, :length => 70) %></p>
-                </div>
-                <div class="show-for-small-only">
-                  <p class="resum-video"><%= truncate(noticia.resum_ca, :length => 200) %></p>
-                </div>
               <% end %>
             </div>
+          </div>
+          <div class="text-index-noticia">
+            <p class="resum-noticia"><%= sanitize noticia.resum_ca %></p>
           </div>
         </div>
         <% counter += 1 %>
       <% end %>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h1>Noticies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titol ca</th>
-      <th>Resum ca</th>
-      <th>Permalink ca</th>
-      <th>Contingut ca</th>
-      <th>Titol es</th>
-      <th>Resum es</th>
-      <th>Permalink es</th>
-      <th>Contingut es</th>
-      <th>Data</th>
-      <th>Dapc</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @noticies.each do |noticia| %>
-      <tr>
-        <td><%= noticia.titol_ca %></td>
-        <td><%= noticia.resum_ca %></td>
-        <td><%= noticia.permalink_ca %></td>
-        <td><%= noticia.contingut_ca %></td>
-        <td><%= noticia.titol_es %></td>
-        <td><%= noticia.resum_es %></td>
-        <td><%= noticia.permalink_es %></td>
-        <td><%= noticia.contingut_es %></td>
-        <td><%= noticia.data %></td>
-        <td><%= noticia.dapc %></td>
-        <td><%= link_to 'Show', noticia %></td>
-        <td><%= link_to 'Edit', edit_noticia_path(noticia) %></td>
-        <td><%= link_to 'Destroy', noticia, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Noticia', new_noticia_path %>
-
-<div class="grid-container">
-  <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-        <h4>This is a row of cards.</h4>
-          <p>This row of cards is embedded in an X-Y Block Grid.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-        <h4>This is a row of cards.</h4>
-          <p>This row of cards is embedded in an X-Y Block Grid.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
