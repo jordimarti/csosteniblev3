@@ -3,11 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .img-index-noticia {
-	//filter: brightness(70%);
+	filter: brightness(70%);
+	height: 300px;
+	width: 100%;
 }
 
 .index-noticia-container {
 	position: relative;
+	height: 300px;
+	margin-bottom: 20px;
 }
 
 .titol-index-noticia {
