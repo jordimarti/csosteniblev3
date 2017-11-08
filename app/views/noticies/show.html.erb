@@ -1,54 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container container-show-cas">
+  <div class="grid-x grid-margin-x">
+    <div class="medium-9 cell">
+      <div class="container-titol-noticia">
+        <h2 class="titol-noticia"><%= @noticia.titol_ca %></h2>
+      </div>
+      <div class="imatge-noticia">
+        <%= image_tag @noticia.image_url(:original) %>
+      </div>
+      <div class="container-text-noticia">
+        <%= sanitize @noticia.contingut_ca %>
+      </div>
+    </div>
+    <div class="medium-3 cell">
+      <div class="titol-seccio">
+        ALTRES NOTÍCIES
+      </div>
+      <% @noticies.each do |noticia| %>
+        <div class="container-noticia-lateral">
+          <%= image_tag noticia.image_url(:thumb) %>
+          <span class="titol-noticia-lateral"><%= noticia.titol_ca %></span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Titol ca:</strong>
-  <%= @noticia.titol_ca %>
-</p>
-
-<p>
-  <strong>Resum ca:</strong>
-  <%= @noticia.resum_ca %>
-</p>
-
-<p>
-  <strong>Permalink ca:</strong>
-  <%= @noticia.permalink_ca %>
-</p>
-
-<p>
-  <strong>Contingut ca:</strong>
-  <%= @noticia.contingut_ca %>
-</p>
-
-<p>
-  <strong>Titol es:</strong>
-  <%= @noticia.titol_es %>
-</p>
-
-<p>
-  <strong>Resum es:</strong>
-  <%= @noticia.resum_es %>
-</p>
-
-<p>
-  <strong>Permalink es:</strong>
-  <%= @noticia.permalink_es %>
-</p>
-
-<p>
-  <strong>Contingut es:</strong>
-  <%= @noticia.contingut_es %>
-</p>
-
-<p>
-  <strong>Data:</strong>
-  <%= @noticia.data %>
-</p>
-
-<p>
-  <strong>Dapc:</strong>
-  <%= @noticia.dapc %>
-</p>
 
 <%= link_to 'Edit', edit_noticia_path(@noticia) %> |
 <%= link_to 'Back', noticies_path %>

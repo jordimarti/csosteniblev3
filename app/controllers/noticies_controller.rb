@@ -10,6 +10,8 @@ class NoticiesController < ApplicationController
   # GET /noticies/1
   # GET /noticies/1.json
   def show
+    #Seleccionem últimes noticies eliminant la noticia que estem mostrant
+    @noticies = Noticia.order(created_at: :desc).limit(6).reject { |noticia| noticia == @noticia }
   end
 
   # GET /noticies/new
