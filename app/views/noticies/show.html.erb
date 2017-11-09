@@ -16,10 +16,12 @@
         ALTRES NOTÍCIES
       </div>
       <% @noticies.each do |noticia| %>
-        <div class="container-noticia-lateral">
-          <%= image_tag noticia.image_url(:thumb) %>
-          <span class="titol-noticia-lateral"><%= noticia.titol_ca %></span>
-        </div>
+        <%= link_to noticia do %>
+          <div class="container-noticia-lateral">
+            <%= image_tag noticia.image_url(:thumb) %>
+            <span class="titol-noticia-lateral"><%= noticia.titol_ca %></span>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
