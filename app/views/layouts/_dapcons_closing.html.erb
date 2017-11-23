@@ -8,16 +8,18 @@
 						<% counter = 0 %>
 						<div class="grid-x grid-margin-x">
 						<% @noticies.each do |noticia| %>
-			        <% if counter != 0 && counter % 2 == 0 %>
+			        <% if counter != 0 && counter % 3 == 0 %>
 			          </div>
 			          <div class="grid-x grid-margin-x">
 			        <% end %>
 
-			        <div class="medium-6 cell">
-								<div class="contenidor-noticia">
-									
-									<%= noticia.titol_ca %>
-								</div>
+			        <div class="medium-4 cell">
+								<%= link_to noticia do %>
+				          <div class="container-noticia-lateral">
+				            <%= image_tag noticia.image_url(:thumb) %>
+				            <span class="titol-noticia-lateral"><%= noticia.titol_ca %></span>
+				          </div>
+				        <% end %>
 							</div>
 							<% counter += 1 %>
 						<% end %>
