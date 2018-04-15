@@ -1,4 +1,9 @@
 ca:
+  date:
+    order:
+      - :day
+      - :month
+      - :year
   activerecord:
     errors:
       models:
@@ -44,6 +49,7 @@ ca:
       utilitat_dapcons: "Utilitat de les DAPCONS<sup>®</sup>"
       organitzacions_afiliades: "Organitzacions afiliades"
       productes_registrats: "Productes registrats"
+      comparador: "Comparador"
       empreses_dapcons: "Empreses DAPcons<sup>®</sup>"
       documents_oficials: "Documents oficials"
       administradors: "Administradors"
@@ -71,3 +77,5 @@ ca:
       que_son: "Què són les DAPcons<sup>®</sup>?"
     utilitat:
       utilitat: "Utilitat i ús de les DAPcons<sup>®</sup>"
+    comparador:
+      comparador: "Comparador"

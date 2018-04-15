@@ -1,0 +1,52 @@
+<%= render "layouts/dapcons_navigation" %>
+			<div class="continguts-dapcons">
+				<div class="titol-pagina-dapcons">
+	        <%= sanitize t('.comparador') %>
+	      </div>
+	      
+    		<div class="llistat-comparador">
+    			<ul>
+    			<% @productes.each do |producte| %>
+    				<li><%= producte.nom_ca %></li>
+    				<ul>
+    					<% producte.indicadors.each do |indicador| %>
+    						<% dades_indicador = TipusIndicador.find(indicador.tipus_indicador_id) %>
+    						<li><%= dades_indicador.nom_ca %>: <%= indicador.valor %> <%= dades_indicador.unitats %></li>
+    					<% end %>
+    				</ul>
+    			<% end %>
+    			</ul>
+    		</div>
+
+    		<div class="grafiques-comparador">
+    			<% numero_final = @tipus_indicadors.count - 1 %>
+    			<% for i in 0..numero_final %> 
+    			
+	    			
+	    			<div class="container-grafica">
+	    				<dl>
+							  <dt>
+							    <%= @tipus_indicadors[i].nom_ca %>
+							  </dt>
+							  <% 
+							  	valor_primer = @productes.first.indicadors[i].valor 
+							  	valor_segon = @productes.second.indicadors[i].valor
+							  	if valor_primer < valor_segon
+							  		percentatge_primer = (valor_primer/valor_segon)*100
+							  		percentatge_segon = 100
+							  	else
+							  		percentatge_primer = 100
+							  		percentatge_segon = (valor_segon/valor_primer)*100
+							  	end
+							  %>
+							  	
+							  <dd class="percentage percentage-<%= percentatge_primer.to_i %>"><span class="text"><%= valor_primer %></span></dd>
+							  <dd class="percentage percentage-<%= percentatge_segon.to_i %>"><span class="text"><%= valor_segon %></span></dd>
+							</dl>
+	    			</div>
+
+	    		<% end %>
+
+    		</div>
+    	</div>
+	      	

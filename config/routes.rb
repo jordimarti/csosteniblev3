@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :indicadors
+  resources :tipus_indicadors
+  resources :tipus_dada_inventaris
+  resources :producte_dapcons
   resources :cerca_productes
   get 'productes/cerca_productes'
   get 'dapcons', to: 'dapcons#index', :as => :dapcons
@@ -17,6 +21,7 @@ Rails.application.routes.draw do
   get 'dapcons/afiliacio'
   get 'dapcons/registrar_producte'
   get 'dapcons/contacte'
+  get 'dapcons/comparador'
   resources :foto_casos
   resources :photos
   get 'temes_clau/index'

@@ -49,6 +49,11 @@ class DapconsController < ApplicationController
   def contacte
   end
 
+  def comparador
+    @productes = ProducteDapcons.all
+    @tipus_indicadors = TipusIndicador.all
+  end
+
   private
     def noticies_dapc
       @noticies = Noticia.where(dapc: true).limit(6)
